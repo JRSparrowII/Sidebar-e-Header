@@ -1,5 +1,5 @@
-import { Header } from "../components/Header";
-import { SideBar } from "../components/Sidebar";
+import { Header } from "../components/Header/Index";
+import { SideBar } from "../components/Sidebar/index";
 import {Flex, Box, Text, Button, Stack, SimpleGrid } from '@chakra-ui/react'
 import dynamic from "next/dynamic";
 import { theme } from "../styles/theme";
@@ -71,7 +71,7 @@ export default function Dashboard(){
                 <SideBar />
                 <SimpleGrid flex="1" gap="4" minChildWidth="320px" alignItems="flex-start">
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
@@ -82,7 +82,7 @@ export default function Dashboard(){
                         </Chart>
                     </Box>
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
@@ -91,7 +91,7 @@ export default function Dashboard(){
                         <Chart options={options} series={series} type="area" height={160}></Chart>
                     </Box>
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
@@ -100,7 +100,7 @@ export default function Dashboard(){
                         <Chart options={options} series={series} type="area" height={160}></Chart>
                     </Box>
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
@@ -109,7 +109,7 @@ export default function Dashboard(){
                         <Chart options={options} series={series} type="area" height={160}></Chart>
                     </Box>
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
@@ -118,7 +118,7 @@ export default function Dashboard(){
                         <Chart options={options} series={series} type="area" height={160}></Chart>
                     </Box>
                     <Box
-                        p="8"
+                        p={["6","8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4"
