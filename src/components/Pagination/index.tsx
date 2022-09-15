@@ -4,7 +4,7 @@ import { PaginationItem } from './PaginationItem';
 export function Pagination(){
     return (
         // O STACK E VERTICAL POR PADRAO
-        <Stack direction="row" spacing="6" mt="8" justify="space-between" align="center">
+        <Stack direction={["column", "row"]} spacing="6" mt="8" justify="space-between" align="center">
             
             <Box>
                 <strong>1</strong> - <strong>10</strong> de <strong>100</strong>

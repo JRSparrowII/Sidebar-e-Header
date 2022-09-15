@@ -1,12 +1,16 @@
-import { Box, Flex, Heading, Button, Icon, Text, Table, Thead, Tr, Th, Td, Checkbox, Tbody } from "@chakra-ui/react";
+import { Box, Flex, Heading, Button, Icon, Text, Table, Thead, Tr, Th, Td, Checkbox, Tbody, useBreakpointValue } from "@chakra-ui/react";
 import { Header } from "../../components/Header/Index";
 import { SideBar } from "../../components/Sidebar/index";
 import { Pagination } from "../../components/Pagination";
 import {RiAddLine, RiPencilLine, RiDeleteBin3Line } from 'react-icons/ri'
 
-
-
 export default function UserList(){
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    });
+
     return (
         <Box>
             <Header/>
@@ -30,16 +34,16 @@ export default function UserList(){
                     <Table colorScheme="whiteAlpha" width="100%">
                         <Thead>
                             <Tr>
-                                <Th px="6" color="gray.300" width="8">
+                                <Th px={["4","6"]} color="gray.300" width="8">
                                     <Checkbox colorScheme="pink"/>                                    
                                 </Th>
                                 <Th>Usuario</Th>
-                                <Th>Data de Cadastro</Th>
+                                { isWideVersion && <Th>Data de Cadastro</Th>}
                                 <Th w="8">Ações</Th>
                             </Tr>
                         </Thead> 
                         <Tbody>
-                            <Tr px="6">
+                            <Tr px={["4","6"]}>
                                 <Td><Checkbox colorScheme="pink"/> </Td>
                                 <Td>
                                     <Box>
@@ -47,7 +51,7 @@ export default function UserList(){
                                         <Text fontSize="sm" color="gray.300">henrique@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>12 de setembro de 2022</Td>
+                                { isWideVersion && <Td>12 de setembro de 2022</Td>}
                                 <Td>
                                     <Button 
                                         as="a" 
@@ -70,7 +74,7 @@ export default function UserList(){
                                     </Button>
                                 </Td>
                             </Tr>
-                            <Tr px="6">
+                            <Tr px={["4","6"]}>
                                 <Td><Checkbox colorScheme="pink"/> </Td>
                                 <Td>
                                     <Box>
@@ -78,7 +82,7 @@ export default function UserList(){
                                         <Text fontSize="sm" color="gray.300">henrique@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>12 de setembro de 2022</Td>
+                                { isWideVersion && <Td>12 de setembro de 2022</Td>}
                                 <Td>
                                     <Button 
                                         as="a" 
@@ -101,7 +105,7 @@ export default function UserList(){
                                     </Button>
                                 </Td>
                             </Tr>
-                            <Tr px="6">
+                            <Tr px={["4","6"]}>
                                 <Td><Checkbox colorScheme="pink"/> </Td>
                                 <Td>
                                     <Box>
@@ -109,7 +113,7 @@ export default function UserList(){
                                         <Text fontSize="sm" color="gray.300">henrique@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>12 de setembro de 2022</Td>
+                                { isWideVersion && <Td>12 de setembro de 2022</Td>}
                                 <Td>
                                     <Button 
                                         as="a" 
